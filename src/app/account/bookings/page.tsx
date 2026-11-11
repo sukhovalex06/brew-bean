@@ -2,6 +2,7 @@ import { createClient } from '@/lib/supabase/server'
 import { CancelBookingButton } from '@/components/forms/CancelBookingButton'
 import { CalendarX2 } from 'lucide-react'
 
+export const dynamic = 'force-dynamic'
 export const metadata = { title: 'Мои брони | BREW & BEAN' }
 
 export default async function BookingsPage() {

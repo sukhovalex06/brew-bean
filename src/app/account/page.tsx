@@ -1,6 +1,7 @@
 import { createClient } from '@/lib/supabase/server'
 import { Coffee } from 'lucide-react'
 
+export const dynamic = 'force-dynamic'
 export const metadata = {
   title: 'Мой профиль | BREW & BEAN',
 }
