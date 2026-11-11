@@ -1,6 +1,7 @@
 import { createClient } from '@/lib/supabase/server'
 import Image from 'next/image'
 
+export const instant = false
 export const metadata = {
   title: 'Меню | BREW & BEAN',
   description: 'Познакомьтесь с нашим ассортиментом кофе, напитков и десертов.',
