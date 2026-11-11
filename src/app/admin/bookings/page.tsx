@@ -2,7 +2,7 @@ import { createClient } from '@/lib/supabase/server'
 import { AdminBookingActions } from '@/components/forms/AdminBookingActions'
 import { Users, Mail } from 'lucide-react'
 
-export const dynamic = 'force-dynamic'
+export const instant = false
 export const metadata = { title: 'Все бронирования | Админ' }
 
 export default async function AdminBookingsPage() {

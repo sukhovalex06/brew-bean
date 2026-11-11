@@ -3,7 +3,7 @@ import { AddMenuForm } from '@/components/forms/AddMenuForm'
 import { DeleteMenuButton } from '@/components/forms/DeleteMenuButton'
 import Image from 'next/image'
 
-export const dynamic = 'force-dynamic'
+export const instant = false
 export const metadata = { title: 'Управление меню | Админ' }
 
 export default async function AdminMenuPage() {
