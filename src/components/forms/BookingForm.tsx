@@ -57,7 +57,7 @@ export function BookingForm() {
   }
 
   // Получаем завтрашнюю дату для минимального значения в календаре
-const [midDate, setMinDate] = useState('')
+const [minDate, setMinDate] = useState('')
 
 useEffect(() => {
   const tomorrow = new Date()
