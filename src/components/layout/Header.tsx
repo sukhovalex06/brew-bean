@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { Coffee, Menu, X } from 'lucide-react'
 import { useState } from 'react'
+import { User } from 'lucide-react'
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -39,6 +40,10 @@ export function Header() {
           <Link href="/#about" className="block text-lg text-coffee" onClick={() => setIsMenuOpen(false)}>О нас</Link>
           <Link href="/menu" className="block text-lg text-coffee" onClick={() => setIsMenuOpen(false)}>Меню</Link>
           <Link href="/booking" className="block text-center mt-2 px-6 py-3 bg-coffee text-cream rounded-xl" onClick={() => setIsMenuOpen(false)}>Бронь стола</Link>
+          <Link href="/account" className="flex items-center gap-2 hover:text-terracotta transition-colors">
+            <User className="w-5 h-5"/>
+            <span className="md:hidden">Личный кабинет</span>
+          </Link>
         </div>
       )}
     </header>
