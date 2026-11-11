@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import * as z from 'zod'
@@ -57,9 +57,13 @@ export function BookingForm() {
   }
 
   // Получаем завтрашнюю дату для минимального значения в календаре
+const [midDate, setMinDate] = useState('')
+
+useEffect(() => {
   const tomorrow = new Date()
   tomorrow.setDate(tomorrow.getDate() + 1)
-  const minDate = tomorrow.toISOString().split('T')[0]
+  setMinDate(tomorrow.toISOString().split('T')[0])
+}, [])
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-6 bg-white p-8 rounded-3xl shadow-sm border border-latte/10">
