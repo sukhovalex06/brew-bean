@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@theme {
+  /* Палитра */
+  --color-coffee: #3E2723;
+  --color-cream: #F5E6D3;
+  --color-latte: #C8A27A;
+  --color-terracotta: #D2691E;
+
+  /* Шрифты */
+  --font-sans: var(--font-inter), sans-serif;
+  --font-serif: var(--font-playfair), serif;
+
+  /* Скругления */
+  --radius-xl: 12px;
+  --radius-2xl: 16px;
+  --radius-3xl: 20px;
+}
+
+@layer base {
+  body {
+    @apply bg-cream text-coffee font-sans antialiased selection:bg-terracotta selection:text-white;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif font-semibold;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
