@@ -56,15 +56,7 @@ export function BookingForm() {
     setIsPending(false)
   }
 
-  // Получаем завтрашнюю дату для минимального значения в календаре
-const [minDate, setMinDate] = useState('')
-
-useEffect(() => {
-  const tomorrow = new Date()
-  tomorrow.setDate(tomorrow.getDate() + 1)
-  setMinDate(tomorrow.toISOString().split('T')[0])
-}, [])
-
+ 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-6 bg-white p-8 rounded-3xl shadow-sm border border-latte/10">
       
@@ -98,7 +90,6 @@ useEffect(() => {
           <input
             {...register('date')}
             type="date"
-            min={minDate}
             className="w-full px-4 py-3 rounded-xl border border-latte/30 focus:border-terracotta focus:ring-1 focus:ring-terracotta outline-none transition-all"
           />
           {errors.date && <p className="text-red-500 text-sm mt-1">{errors.date.message}</p>}
